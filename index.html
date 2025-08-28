@@ -1,200 +1,242 @@
-<!DOCTYPE html>
-<html lang="ne">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mero Aawaz</title>
-<link href="logoko lagi thou" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<div class="sidebar-layout">
-  <aside class="sidebar">
+<!DOCTYPE html> 
+<html lang="en"> 
+  <head>
+     <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Mero Aawaz - Nepal Municipal Complaint Portal</title> 
+     <link rel="stylesheet" href="style.css">
+     </head> 
+     <body>
+<div class="sidebar">
     <div class="logo">
-      <i class="fas fa-mountain"></i><h1>Mero Aawaz</h1>
+        <h1>Mero Aawaz</h1>
     </div>
-    <nav>
-      <ul>
-        <li><a href="#home">गृहपृष्ठ</a></li>
-        <li><a href="#problems">समस्याहरू</a></li>
-        <li><a href="#report">रिपोर्ट</a></li>
-        <li><a href="#suggest">सुझाव</a></li>
-        <li><a href="#contact">सम्पर्क</a></li>
-      </ul>
+    <nav class="sidebar-nav">
+        <ul>
+            <li class="nav-item active" data-section="home">
+                <i class="fas fa-home nav-icon"></i>
+                <span class="nav-text">Home</span>
+            </li>
+            <li class="nav-item" data-section="problems">
+                <i class="fas fa-exclamation-triangle nav-icon"></i>
+                <span class="nav-text">Problems</span>
+            </li>
+            <li class="nav-item" data-section="report">
+                <i class="fas fa-flag nav-icon"></i>
+                <span class="nav-text">Report</span>
+            </li>
+            <li class="nav-item" data-section="suggest">
+                <i class="fas fa-lightbulb nav-icon"></i>
+                <span class="nav-text">Suggestions</span>
+            </li>
+            <li class="nav-item" data-section="contact">
+                <i class="fas fa-phone-alt nav-icon"></i>
+                <span class="nav-text">Contact</span>
+            </li>
+        </ul>
     </nav>
-    <div class="language-toggle" id="languageToggle">
-      <img src="https://flagcdn.com/w40/np.png" srcset="https://flagcdn.com/w80/np.png 2x" width="40" alt="Nepal">
-      <span>नेपाली</span>
+    
+    <div class="language-toggle">
+        <img src="M.png" srcset="https://flagcdn.com/w80/gb.png 2x" width="40" alt="English">
+        <span>English</span>
     </div>
-  </aside>
+</div>
+<div class="main-content">
+    <section class="section active" id="home">
+        <div class="hero">
+            <div class="hero-content">
+                <h2>Voice of Nepali Citizens</h2>
+                <p>E-platform to report local problems to the government in cities and villages across Nepal</p>
+                <a href="#report" class="btn report-btn">Report a Problem</a>
+            </div>
+        </div>
+    </section>
+ 
 
-  <main class="main-content">
-    <section class="hero" id="home">
-      <div class="hero-content">
-        <h2>नेपाली नागरिकको आवाज</h2>
-        <p>सहर र गाउँका समस्याहरू स्थानीय सरकारलाई Report गर्ने ई-प्लेटफर्म</p>
-        <a href="#report" class="btn">समस्याको Report दिनुहोस्</a>
-      </div>
+    
+    <section class="section" id="problems">
+        <div class="container">
+            <div class="section-title">
+                <h2>Common Local Problems</h2>
+                <p>These are some common problems faced by citizens across Nepal</p>
+            </div>
+       
+
+            <div class="problems-grid">
+                <div class="problem-card" data-problem="road">
+                    <div class="problem-img" style="background-image: url('https://media.istockphoto.com/id/526298880/photo/road-rollers-working-on-the-construction-site.jpg?s=612x612&w=0&k=20&c=C7CM-81xFktkVKcJMmC-CgYuE5D2zomncwTv7kZ5h4o=');"></div>
+                    <div class="problem-content">
+                        <h3>Road Maintenance Issues</h3>
+                        <p>Roads unsuitable for vehicles, potholes, broken road signs, and other road maintenance issues.</p>
+                        <div class="btn problem-btn">Report This Problem</div>
+                    </div>
+                </div>
+           
+
+                <div class="problem-card" data-problem="waste">
+                    <div class="problem-img" style="background-image: url('https://images.unsplash.com/photo-1611284446314-60a58ac0deb9?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2FzdGUlMjBiaW58ZW58MHx8MHx8fDA%3D');"></div>
+                    <div class="problem-content">
+                        <h3>Waste Management</h3>
+                        <p>Overflowing bins, open garbage areas, irregular waste collection, and other waste issues.</p>
+                        <div class="btn problem-btn">Report This Problem</div>
+                    </div>
+                </div>
+
+                <div class="problem-card" data-problem="safety">
+                    <div class="problem-img" style="background-image: url('https://devpolicy.org/wp-content/uploads/2017/06/Nau-Danda-Health-Post-Kaski-District-PACAF-Flickr-CC-BY-2.0.jpg');"></div>
+                    <div class="problem-content">
+                        <h3>Public Safety</h3>
+                        <p>Malfunctioning lights, unsafe public spaces, traffic problems, and other safety issues.</p>
+                        <div class="btn problem-btn">Report This Problem</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="custom-complaint">
+                <h3>Other Problems?</h3>
+                <p>If you are facing any other problems, click below</p>
+                <button class="btn" id="customComplaintBtn">Report Other Problem</button>
+            </div>
+        </div>
     </section>
 
-    <section class="container" id="problems">
-      <div class="section-title">
-        <h2>सामान्य स्थानीय समस्याहरू</h2>
-        <p>यी केही सामान्य समस्याहरू हुन् जुन नेपालका नागरिकहरूले सामना गर्छन्</p>
-      </div>
-      <div class="problems-grid">
-        <div class="problem-card animate" data-problem="road">
-          <div class="problem-img" style="background-image: url('https://images.unsplash.com/photo-1559561727-6df52e4d7d0e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');"></div>
-          <div class="problem-content">
-            <h3>सडक मर्मतसम्बन्धी समस्या</h3>
-            <p>गाडामोटर चल्न नसक्ने सडक, खाडल, टुटेका सडक संकेतहरू, र सडक मर्मतका अन्य समस्याहरू।</p>
-            <div class="btn">यो समस्याको Report दिनुहोस्</div>
-          </div>
+    <section class="section" id="report">
+        <div class="container">
+            <div class="section-title">
+                <h2>Report Local Problem</h2>
+                <p>Report problems in your area to the local government</p>
+            </div>
+
+            <div class="province-selector">
+                <h3>Which province are you from?</h3>
+                <select id="provinceSelect">
+                    <option value="">-- Select Province --</option>
+                    <option value="koshi">Koshi Province</option>
+                    <option value="madhesh">Madhesh Province</option>
+                    <option value="bagmati">Bagmati Province</option>
+                    <option value="gandaki">Gandaki Province</option>
+                    <option value="lumbini">Lumbini Province</option>
+                    <option value="karnali">Karnali Province</option>
+                    <option value="sudurpashchim">Sudurpashchim Province</option>
+                </select>
+                
+                <div class="form-group">
+                    <label for="exactLocation" class="required">Address</label>
+                    <input type="text" id="exactLocation" class="form-control" placeholder="Enter your address" required>
+                </div>
+            </div>
+
+            <form id="complaintForm" class="complaint-form">
+                <input type="hidden" id="problemType" value="">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name" class="required">Full Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="Your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" class="required">Phone Number</label>
+                        <input type="tel" id="phone" class="form-control" placeholder="Your phone number" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="problemTitle" class="required">Problem Title</label>
+                    <input type="text" id="problemTitle" class="form-control" placeholder="Brief title of the problem" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="description" class="required">Problem Description</label>
+                    <textarea id="description" class="form-control" placeholder="Write a detailed description of the problem..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="file">Upload Image (Optional)</label>
+                    <input type="file" id="file" class="form-control">
+                </div>
+
+                <div class="submit-btn">
+                    <button type="submit" class="btn">Submit Report</button>
+                </div>
+            </form>
+
+            <div id="contactDetails" class="contact-details">
+                <h3>Your Province Contact Details</h3>
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <h4>Province Office</h4>
+                        <p>+977-1-4212345</p>
+                        <p>province@nepal.gov.np</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="problem-card animate" data-problem="waste">
-          <div class="problem-img" style="background-image: url('https://images.unsplash.com/photo-1587017539504-67cfbddac569?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80');"></div>
-          <div class="problem-content">
-            <h3>फोहोर व्यवस्थापन</h3>
-            <p>उब्जियरका डिब्बाहरू, खुला फोहोर ठाउँहरू, अनियमित फोहोर संकलन, र फोहोरको अन्य समस्याहरू।</p>
-            <div class="btn">यो समस्याको Report दिनुहोस्</div>
-          </div>
-        </div>
-        <div class="problem-card animate" data-problem="safety">
-          <div class="problem-img" style="background-image: url('https://images.unsplash.com/photo-1611267254323-4db7b39c732c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80');"></div>
-          <div class="problem-content">
-            <h3>सार्वजनिक सुरक्षा</h3>
-            <p>बिग्रिएका बत्तीहरू, असुरक्षित सार्वजनिक स्थानहरू, यातायात समस्याहरू, र सुरक्षाका अन्य मुद्दाहरू।</p>
-            <div class="btn">यो समस्याको Report दिनुहोस्</div>
-          </div>
-        </div>
-      </div>
-      <div class="custom-complaint">
-        <h3>अरू समस्याहरू?</h3>
-        <p>तपाईंले अन्य कुनै समस्याहरूको सामना गर्नुभएको छ भने तल क्लिक गर्नुहोस्</p>
-        <button class="btn" id="customComplaintBtn">अन्य समस्याको Report दिनुहोस्</button>
-      </div>
     </section>
 
-    <section class="container" id="report">
-      <div class="section-title">
-        <h2>स्थानीय समस्याको Report दिनुहोस्</h2>
-        <p>आफ्नो क्षेत्रमा भएका समस्याहरू स्थानीय सरकारलाई Report गर्नुहोस्</p>
-      </div>
-      <div class="province-selector animate">
-        <h3>तपाईं कुन प्रदेशबाट हुनुहुन्छ?</h3>
-        <select id="provinceSelect">
-          <option value="">-- प्रदेश छान्नुहोस् --</option>
-          <option value="koshi">कोशी प्रदेश</option>
-          <option value="madhesh">मधेश प्रदेश</option>
-          <option value="bagmati">बागमती प्रदेश</option>
-          <option value="gandaki">गण्डकी प्रदेश</option>
-          <option value="lumbini">लुम्बिनी प्रदेश</option>
-          <option value="karnali">कर्णाली प्रदेश</option>
-          <option value="sudurpashchim">सुदूरपश्चिम प्रदेश</option>
-        </select>
-        <div class="form-group">
-          <label for="exactLocation" class="required">ठेगाना</label>
-          <input type="text" id="exactLocation" class="form-control" placeholder="तपाईंको ठेगाना प्रविष्ट गर्नुहोस्" required>
-        </div>
-      </div>
+    <section class="section" id="suggest">
+        <div class="container">
+            <div class="section-title">
+                <h2>Suggestions</h2>
+                <p>Send us your suggestions</p>
+            </div>
 
-      <form id="complaintForm" class="complaint-form">
-        <input type="hidden" id="problemType" value="">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="name" class="required">पूरा नाम</label>
-            <input type="text" id="name" class="form-control" placeholder="तपाईंको पूरा नाम" required>
-          </div>
-          <div class="form-group">
-            <label for="phone" class="required">फोन नम्बर</label>
-            <input type="tel" id="phone" class="form-control" placeholder="तपाईंको फोन नम्बर" required>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="problemTitle" class="required">समस्याको शीर्षक</label>
-          <input type="text" id="problemTitle" class="form-control" placeholder="समस्याको संक्षिप्त शीर्षक" required>
-        </div>
-        <div class="form-group">
-          <label for="description" class="required">समस्याको विवरण</label>
-          <textarea id="description" class="form-control" placeholder="समस्याको विस्तृत विवरण लेख्नुहोस्..." required></textarea>
-        </div>
-        <div class="form-group">
-          <label for="file">तस्वीर अपलोड गर्नुहोस् (वैकल्पिक)</label>
-          <input type="file" id="file" class="form-control">
-        </div>
-        <div class="submit-btn">
-          <button type="submit" class="btn">Report पेश गर्नुहोस्</button>
-        </div>
-      </form>
+            <form class="suggest-form">
+                <div class="form-group">
+                    <label for="suggestionName">Full Name</label>
+                    <input type="text" id="suggestionName" class="form-control" placeholder="Your full name">
+                </div>
 
-      <div id="contactDetails" class="contact-details">
-        <h3>तपाईंको प्रदेशका सम्पर्क विवरणहरू</h3>
-        <div class="contact-info">
-          <div class="contact-card">
-            <i class="fas fa-phone-alt"></i>
-            <h4>प्रदेश कार्यालय</h4>
-            <p>+९७७-१-४२१२३४५</p>
-            <p>province@nepal.gov.np</p>
-          </div>
+                <div class="form-group">
+                    <label for="suggestionMessage">Message</label>
+                    <textarea id="suggestionMessage" class="form-control" placeholder="Write your suggestion here..."></textarea>
+                </div>
+
+                <div class="submit-btn">
+                    <button type="submit" class="btn">Send Suggestion</button>
+                </div>
+            </form>
         </div>
-      </div>
     </section>
 
-    <section class="container" id="suggest">
-      <div class="section-title">
-        <h2>सुझाव</h2>
-        <p>हामीलाई तपाईंका सुझावहरू पठाउनुहोस्</p>
-      </div>
-      <form class="suggest-form animate">
-        <div class="form-group">
-          <label for="suggestionName">पूरा नाम</label>
-          <input type="text" id="suggestionName" class="form-control" placeholder="तपाईंको पूरा नाम">
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Use the details below to contact us</p>
+            </div>
+
+            <div class="contact-info">
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>Headquarters</h4>
+                    <p>Kathmandu, Nepal</p>
+                </div>
+
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h4>Email</h4>
+                    <p>contact@meroaawaz.gov.np</p>
+                </div>
+
+                <div class="contact-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <h4>Phone</h4>
+                    <p>+977-1-4123456</p>
+                </div>
+            </div>
         </div>
-        <div class="form-group">
-          <label for="suggestionMessage">सन्देश</label>
-          <textarea id="suggestionMessage" class="form-control" placeholder="तपाईंको सुझाव यहाँ लेख्नुहोस्..."></textarea>
-        </div>
-        <div class="submit-btn">
-          <button type="submit" class="btn">सुझाव पठाउनुहोस्</button>
-        </div>
-      </form>
     </section>
-
-    <section class="container" id="contact">
-      <div class="section-title">
-        <h2>सम्पर्क गर्नुहोस्</h2>
-        <p>हामीलाई सम्पर्क गर्न तल विवरणहरू प्रयोग गर्नुहोस्</p>
-      </div>
-      <div class="contact-info animate">
-        <div class="contact-card">
-          <i class="fas fa-map-marker-alt"></i>
-          <h4>मुख्यालय</h4>
-          <p>काठमाडौं, नेपाल</p>
-        </div>
-        <div class="contact-card">
-          <i class="fas fa-envelope"></i>
-          <h4>ईमेल</h4>
-          <p>contact@meroaawaz.gov.np</p>
-        </div>
-        <div class="contact-card">
-          <i class="fas fa-phone-alt"></i>
-          <h4>फोन</h4>
-          <p>+९७७-१-४१२३४५६</p>
-        </div>
-      </div>
-    </section>
-
-    <div id="successModal" class="modal">
-      <div class="modal-content">
-        <h3>Report पेश गरियो!</h3>
-        <p>तपाईंको समस्या स्थानीय सरकारलाई Report गरियो।</p>
-        <button id="modalOkBtn" class="btn">ठीक छ</button>
-      </div>
-    </div>
-
-  </main>
 </div>
 
-<script src="script.js"></script>
-</body>
+<div id="successModal" class="modal">
+    <div class="modal-content">
+        <h3>Report Submitted!</h3>
+        <p>Your problem has been reported to the local government.</p>
+        <button id="modalOkBtn" class="btn">OK</button>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+<script src="js.js"></script>
+</body> 
 </html>
